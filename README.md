@@ -105,7 +105,8 @@ INSERT INTO tb_score(movie_id, user_id, score_value) VALUES (2, 2, 3.0);
 - **Response:**
 
     ```json
-    "content": [
+  {
+  "content": [
         {
             "id": 1,
             "title": "The Witcher",
@@ -120,61 +121,5 @@ INSERT INTO tb_score(movie_id, user_id, score_value) VALUES (2, 2, 3.0);
             "count": 3,
             "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg"
         },
-        {
-            "id": 3,
-            "title": "Shang-Chi e a Lenda dos Dez Anéis",
-            "score": 0.0,
-            "count": 0,
-            "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/cinER0ESG0eJ49kXlExM0MEWGxW.jpg"
-        },
-        {
-            "id": 4,
-            "title": "Matrix Resurrections",
-            "score": 0.0,
-            "count": 0,
-            "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hv7o3VgfsairBoQFAawgaQ4cR1m.jpg"
-        }
     ],
-    "pageable": {
-        "pageNumber": 0,
-        "pageSize": 20,
-        "sort": {
-            "empty": true,
-            "sorted": false,
-            "unsorted": true
-        },
-        "offset": 0,
-        "paged": true,
-        "unpaged": false
-    },
-    "last": false,
-    "totalElements": 30,
-    "totalPages": 2,
-    "size": 20,
-    "number": 0,
-    "sort": {
-        "empty": true,
-        "sorted": false,
-        "unsorted": true
-    },
-    "first": true,
-    "numberOfElements": 20,
-    "empty": false
-}
-```
-
-#### Single Movie
-
-- **URL:** `/api/v1/movie/{id}`
-- **Método:** `GET`
-- **Response:**
-
-```JSON
-{
-            "id": 20,
-            "title": "Matrix Resurrections",
-            "score": 0.0,
-            "count": 0,
-            "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hv7o3VgfsairBoQFAawgaQ4cR1m.jpg"
-        }
-```
+  }
