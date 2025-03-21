@@ -1,9 +1,20 @@
 package com.project.api.dto;
 
+import jakarta.validation.constraints.*;
+
 public class ScoreDTO {
+
+    @NotNull
     private Long movieId;
+
+    @NotNull
+    @Email
     private String email;
-    private Double score;
+
+    @NotNull
+    @Min(0)
+    @Max(5)
+    private float score;
 
     public ScoreDTO() {
 
@@ -17,7 +28,7 @@ public class ScoreDTO {
         this.email = email;
     }
 
-    public void setScore(Double score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
@@ -29,7 +40,7 @@ public class ScoreDTO {
         return email;
     }
 
-    public Double getScore() {
+    public float getScore() {
         return score;
     }
 }
