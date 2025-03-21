@@ -3,7 +3,7 @@ package com.project.api.dto;
 public class ScoreDTO {
     private Long movieId;
     private String email;
-    private Double score;
+    private float score;
 
     public ScoreDTO() {
 
@@ -17,7 +17,7 @@ public class ScoreDTO {
         this.email = email;
     }
 
-    public void setScore(Double score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
@@ -29,7 +29,7 @@ public class ScoreDTO {
         return email;
     }
 
-    public Double getScore() {
+    public float getScore() {
         return score;
     }
 }

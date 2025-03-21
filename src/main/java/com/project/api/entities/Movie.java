@@ -1,6 +1,8 @@
 package com.project.api.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,14 +15,17 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private Double score;
+
+    @Min(value = 0, message = "O score deve ser no mínimo 0")
+    @Max(value = 5, message = "O score deve ser no máximo 5")
+    private float score;
     private Integer count;
     private String image;
 
     @OneToMany(mappedBy = "id.movie")
     private Set<Score> scores = new HashSet<>();
 
-    public Movie(Long id, String title, Double score, Integer count, String image) {
+    public Movie(Long id, String title, float score, Integer count, String image) {
         this.id = id;
         this.title = title;
         this.score = score;
@@ -40,7 +45,7 @@ public class Movie {
         this.title = title;
     }
 
-    public void setScore(Double score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
@@ -60,7 +65,7 @@ public class Movie {
         return title;
     }
 
-    public Double getScore() {
+    public float getScore() {
         return score;
     }
 

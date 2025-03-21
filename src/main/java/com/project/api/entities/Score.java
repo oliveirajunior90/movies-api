@@ -5,6 +5,7 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "tb_score")
 public class Score {
@@ -13,7 +14,7 @@ public class Score {
     ScorePK id = new ScorePK();
 
     @Column(name = "score_value")
-    private Double value;
+    private float value;
 
     public Score() {
 
@@ -27,7 +28,7 @@ public class Score {
         id.setUser(user);
     }
 
-    public void setValue(Double value) {
+    public void setValue(float value) {
         this.value = value;
     }
 
@@ -35,7 +36,7 @@ public class Score {
         return id;
     }
 
-    public Double getValue() {
+    public float getValue() {
         return value;
     }
 

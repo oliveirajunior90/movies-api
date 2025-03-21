@@ -5,7 +5,7 @@ import com.project.api.entities.Movie;
 public class MovieDTO{
     private Long id;
     private String title;
-    private Double score;
+    private float score;
     private Integer count;
     private String image;
 
@@ -18,7 +18,7 @@ public class MovieDTO{
         image = movie.getImage();
     }
 
-    public MovieDTO(Long id, String title, Double score, Integer count, String image) {
+    public MovieDTO(Long id, String title, float score, Integer count, String image) {
         this.id = id;
         this.title = title;
         this.score = score;
@@ -34,7 +34,7 @@ public class MovieDTO{
         this.title = title;
     }
 
-    public void setScore(Double score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
@@ -54,7 +54,7 @@ public class MovieDTO{
         return title;
     }
 
-    public Double getScore() {
+    public float getScore() {
         return score;
     }
 
