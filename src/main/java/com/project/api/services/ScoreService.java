@@ -27,10 +27,6 @@ public class ScoreService {
     @Transactional
     public MovieDTO saveScore(ScoreDTO dto) {
 
-        if(dto.getScore() < 0 || dto.getScore() > 5) {
-            throw new IllegalArgumentException("O Score deve ser maior ou igual a 0 e menor ou igual a 5");
-        }
-
         User user = userRepository.findByEmail(dto.getEmail());
         if(user == null) {
             user = new User();
