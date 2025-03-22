@@ -31,7 +31,7 @@ public class SecurityConfiguration {
         }
 
         http
-                .cors(AbstractHttpConfigurer::disable) // Ajuste conforme necessário
+                .cors(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
