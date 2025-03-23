@@ -20,7 +20,6 @@ services:
     build:
       dockerfile: ./Dockerfile
       context: .
-    image: movie-api:1.0
     container_name: movie-api
     networks:
       - network
