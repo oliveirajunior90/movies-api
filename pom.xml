@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>project.sds-movie.backend</groupId>
 	<artifactId>sds-movie</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>sds-movie</name>
 	<description>sds-movie</description>
 	<url/>
@@ -95,8 +95,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
