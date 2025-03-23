@@ -1,5 +1,10 @@
 FROM openjdk:17-jdk-alpine
 
+<<<<<<< Updated upstream
+=======
+COPY --from=build ./target/*.jar app.jar
+
+>>>>>>> Stashed changes
 EXPOSE 8080
 
 ARG JAR_FILE=target/*.jar
